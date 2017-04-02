@@ -19,7 +19,7 @@ fstream
 -
 windows.h
 -
-vector
+sstream
 -
 
 C:/Code/Battleships/main.cpp

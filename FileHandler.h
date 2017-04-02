@@ -9,7 +9,7 @@
 #include <string>
 #include <fstream>
 #include <windows.h>
-#include <vector>
+#include <sstream>
 
 using namespace std;
 
@@ -18,10 +18,12 @@ class FileHandler {
     string dir;
 
 public:
-    ifstream boardFile;
-    vector<ifstream> playerMoves;
-
+    ifstream boardFile, aMoves, bMoves;
+    bool valid = false;
+    static string getCwd();
     FileHandler(string path);
 };
+
+
 
 #endif //PROJECT_FILEHANDLER_H

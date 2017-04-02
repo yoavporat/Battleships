@@ -9,7 +9,7 @@
 #include "FileHandler.h"
 
 using namespace std;
-string getCwd();
+
 bool debug = true;
 
 int main(int argc, char *argv[]) {
@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
 
     if (argc == 1) {
         // use CWD
-        path = getCwd();
+        path = FileHandler::getCwd();
     } else {
         // use given path
         path = argv[1];
@@ -32,22 +32,17 @@ int main(int argc, char *argv[]) {
     }
 
     FileHandler fh(path);
-
-    if (fh.boardFile.is_open()) {
+    cout << "valid? " << fh.valid << endl;
+    /* read from ifstream
+    if (fh.bMoves.is_open()) {
         string line;
-        while (getline(fh.boardFile,line) ) {
+        while (getline(fh.bMoves,line) ) {
             cout << line << endl;
         }
     }
+    */
 
 
     return 0;
 
-}
-
-string getCwd() {
-    char buffer[MAX_PATH];
-    GetModuleFileName( NULL, buffer, MAX_PATH );
-    string::size_type pos = string( buffer ).find_last_of( "\\/" );
-    return string( buffer ).substr( 0, pos);
 }
