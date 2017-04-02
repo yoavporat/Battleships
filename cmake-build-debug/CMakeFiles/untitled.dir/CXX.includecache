@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Code/Battleships/FileHandler.cpp
+FileHandler.h
+C:/Code/Battleships/FileHandler.h
+
+C:/Code/Battleships/FileHandler.h
+iostream
+-
+string
+-
+fstream
+-
+windows.h
+-
+vector
+-
+
+C:/Code/Battleships/main.cpp
+iostream
+-
+string
+-
+windows.h
+-
+FileHandler.h
+C:/Code/Battleships/FileHandler.h
+
